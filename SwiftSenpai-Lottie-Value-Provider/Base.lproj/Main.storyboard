@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="SwiftSenpai_Lottie_Value_Provider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EE6-Is-ZzT" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="20" y="44" width="374" height="288"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="288" id="PJr-B7-OVg"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kiM-FS-FP7">
+                                <rect key="frame" x="18" y="340" width="378" height="31"/>
+                                <connections>
+                                    <action selector="progressSliderValueChanged:" destination="9pv-A4-QxB" eventType="valueChanged" id="8Nk-Pw-bck"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp1-Ao-KWY">
+                                <rect key="frame" x="130" y="382" width="154" height="35"/>
+                                <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3ZZ-sw-5we"/>
+                                    <constraint firstAttribute="width" constant="154" id="YXs-W5-A78"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="E3f-lu-Rye"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vp1-Ao-KWY" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="7tw-gm-obm"/>
+                            <constraint firstItem="vp1-Ao-KWY" firstAttribute="top" secondItem="kiM-FS-FP7" secondAttribute="bottom" constant="12" id="KH2-GS-0vt"/>
+                            <constraint firstItem="kiM-FS-FP7" firstAttribute="top" secondItem="EE6-Is-ZzT" secondAttribute="bottom" constant="8" id="ONq-yr-IKN"/>
+                            <constraint firstItem="EE6-Is-ZzT" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="TcJ-st-Doz"/>
+                            <constraint firstItem="EE6-Is-ZzT" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="Tjk-tP-cbN"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="EE6-Is-ZzT" secondAttribute="trailing" constant="20" id="r2T-6q-3CN"/>
+                            <constraint firstItem="kiM-FS-FP7" firstAttribute="leading" secondItem="EE6-Is-ZzT" secondAttribute="leading" id="xT9-au-iQO"/>
+                            <constraint firstItem="kiM-FS-FP7" firstAttribute="trailing" secondItem="EE6-Is-ZzT" secondAttribute="trailing" id="ydc-Rq-lTe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="animationView" destination="EE6-Is-ZzT" id="5Sp-fL-6eC"/>
+                        <outlet property="progressSlider" destination="kiM-FS-FP7" id="yAE-LC-Ch3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="SwiftSenpai_Lottie_Value_Provider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Xt-ac-jl7" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="20" y="44" width="374" height="288"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="288" id="SX0-Fe-h0L"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ebe-kG-spx">
+                                <rect key="frame" x="18" y="340" width="378" height="31"/>
+                                <connections>
+                                    <action selector="progressSliderValueChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="lME-ba-0Nw"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJ8-ON-7uw">
+                                <rect key="frame" x="130" y="382" width="154" height="35"/>
+                                <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="pqH-cK-Op2"/>
+                                    <constraint firstAttribute="width" constant="154" id="ruu-aP-SHA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="HAk-DB-qd1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="3Xt-ac-jl7" secondAttribute="trailing" constant="20" id="1rj-Sv-cRZ"/>
+                            <constraint firstItem="3Xt-ac-jl7" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Kp5-OM-ceJ"/>
+                            <constraint firstItem="MJ8-ON-7uw" firstAttribute="top" secondItem="ebe-kG-spx" secondAttribute="bottom" constant="12" id="NXy-sx-mg4"/>
+                            <constraint firstItem="ebe-kG-spx" firstAttribute="trailing" secondItem="3Xt-ac-jl7" secondAttribute="trailing" id="T2F-6k-5Sf"/>
+                            <constraint firstItem="3Xt-ac-jl7" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="hT2-1G-AsH"/>
+                            <constraint firstItem="ebe-kG-spx" firstAttribute="leading" secondItem="3Xt-ac-jl7" secondAttribute="leading" id="t0B-H4-1NS"/>
+                            <constraint firstItem="MJ8-ON-7uw" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="uft-nP-0Yy"/>
+                            <constraint firstItem="ebe-kG-spx" firstAttribute="top" secondItem="3Xt-ac-jl7" secondAttribute="bottom" constant="8" id="wOb-nk-nVx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="animationView" destination="3Xt-ac-jl7" id="Mpe-nS-75B"/>
+                        <outlet property="progressSlider" destination="ebe-kG-spx" id="kDw-Tm-rYH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>

@@ -11,16 +11,17 @@ import Lottie
 
 class SecondViewController: UIViewController {
     
-    @IBOutlet weak var animationView: AnimationView!
+    @IBOutlet weak var animationView: LottieAnimationView!
     @IBOutlet weak var progressSlider: UISlider!
     
     var displayLink: CADisplayLink?
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         // Setup animation view
-        let animation = Animation.named("19633-voice-video-switch")
+        let animation = LottieAnimation.named("19633-voice-video-switch")
         animationView.animation = animation
         animationView.contentMode = .scaleAspectFit
         
@@ -55,11 +56,10 @@ class SecondViewController: UIViewController {
         let pointValueDeveloper = PointValueProvider(CGPoint(x: -18, y: 80))
         let centrePositionKeyPath = AnimationKeypath(keypath: "Centre.Rectangle 1.Position")
         animationView.setValueProvider(pointValueDeveloper, keypath: centrePositionKeyPath)
-
         
         // Create gradient colors
-        let color1 = Color(r: (0/255), g: (80/255), b: (115/255), a: 1)
-        let color2 = Color(r: (113/255), g: (199/255), b: (236/255), a: 1)
+        let color1 = LottieColor(r: (0/255), g: (80/255), b: (115/255), a: 1)
+        let color2 = LottieColor(r: (113/255), g: (199/255), b: (236/255), a: 1)
         let gradientValueProvider = GradientValueProvider([color1, color2])
 
         // Set gradient provider

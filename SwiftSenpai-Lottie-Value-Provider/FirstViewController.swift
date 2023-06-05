@@ -11,7 +11,7 @@ import Lottie
 
 class FirstViewController: UIViewController {
 
-    @IBOutlet weak var animationView: AnimationView!
+    @IBOutlet weak var animationView: LottieAnimationView!
     @IBOutlet weak var progressSlider: UISlider!
     
     var displayLink: CADisplayLink?
@@ -20,7 +20,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         // Setup animation view
-        let animation = Animation.named("TwitterHeart")
+        let animation = LottieAnimation.named("TwitterHeart")
         animationView.animation = animation
         animationView.contentMode = .scaleAspectFit
         
@@ -52,7 +52,7 @@ class FirstViewController: UIViewController {
     private func applyAnimationChange() {
         
         // Create ColorValueProvider using Lottie's Color class
-        let orange = Color(r: (251/255), g: (140/255), b: (0/255), a: 1)
+        let orange = LottieColor(r: (251/255), g: (140/255), b: (0/255), a: 1)
         let orangeColorValueProvider = ColorValueProvider(orange)
         
         // Set color value provider to animation view
